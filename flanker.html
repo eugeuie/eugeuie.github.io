@@ -46,7 +46,7 @@ var test_stimuli = [
   }
 ];
 
-var all_trials = jsPsych.randomization.repeat(test_stimuli, 1);
+var all_trials = jsPsych.randomization.repeat(test_stimuli, 20);
 
 var post_trial_gap = function() {
   return Math.floor( Math.random() * 1500 ) + 500;
