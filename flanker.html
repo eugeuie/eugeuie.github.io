@@ -112,7 +112,9 @@
             timeline: timeline,
             on_finish: function() {
                 jsPsych.data.displayData();
+                jsPsych.data.localSave("results.csv", "csv");
             }
+          }
         );
     </script>
 </html>

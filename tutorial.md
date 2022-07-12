@@ -1,11 +1,11 @@
-#Eriksen Flanker Task
+# Eriksen Flanker Task
 
 The flanker task is a popular task to measure response inhibition. In the variant presented here, participants are
 required to judge whether an arrow presented between four other arrows is pointing in the same or the opposite
 direction by pressing a key on the keyboard. We will create a 100-trial long version of this task which provides
 feedback on the participant's performance at the end of the experiment.
 
-##Part 1: Setting up the HTML file
+## Part 1: Setting up the HTML file
 
 As always, we need to create an HTML file which references the Javascript plugins and CSS required. For this experiment,
 we will only use the [jspsych-text](plugins/jspsych-text.js) and [jspsych-single-stim](plugins/jspsych-single-stim.js)
@@ -28,7 +28,7 @@ plugins which can be specified in the `<head>` of the file.
 </html>
 ```
 
-##Part 2: Adding welcome and instructions block and starting the experiment
+## Part 2: Adding welcome and instructions block and starting the experiment
 
 This is also very straightforward. We present a welcome message as well as the instructions in two separate blocks. Of
 course, this text can be adapted according to what you want to focus on. Here, we're just saying that the task is to
@@ -78,7 +78,7 @@ jsPsych.init({
 If you are unsure about any of this, go back to the [tutorial for running a simple reaction time task]
 (http://docs.jspsych.org/tutorials/rt-task/).
 
-###The code so far:
+### The code so far:
 ```html
 <!doctype html>
 <html>
@@ -132,7 +132,7 @@ If you are unsure about any of this, go back to the [tutorial for running a simp
 If you run this code in your browser, you should see the welcome message as well as the instructions. Next, we need to
 define which stimuli we are going to use for the experiment.
 
-##Part 3: Defining the stimuli
+## Part 3: Defining the stimuli
 
 For this experiment we are using four image files which are stored in the `img` folder. First, we need to define them
 as being the `test_stimuli` we want to use. At the same time, we can also define specific attributes per stimulus. For
@@ -180,7 +180,7 @@ var post_trial_gap = function() {
 };
 ```
 
-##Part 4: Creating an experimental block
+## Part 4: Creating an experimental block
 
 So far, we have set up a welcome message, an instructions block, and the stimuli for our experiment. Now comes the most
 important part, that is, creating our `test_block`. It is supported by the `single-stim` plugin, so this information
@@ -206,7 +206,7 @@ Of course, this block also needs to be added to the experiment's timeline:
 timeline.push(test_block);
 ```
 
-###The code so far:
+### The code so far:
 
 ```html
 <!doctype html>
@@ -296,7 +296,7 @@ timeline.push(test_block);
 </html>
 ```
 
-##Part 5: Presenting feedback to the participants
+## Part 5: Presenting feedback to the participants
 
 Running the experiment now will provide you with a welcome message, instructions, and 100 trials. We would like to give
 the participants feedback about their performance at the end of the experiment. (Note: This was already part of the
@@ -368,7 +368,7 @@ var debrief_block = {
 };
 ```
 
-###The final code:
+### The final code:
 ```html
 <!doctype html>
 <html>

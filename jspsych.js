@@ -760,8 +760,8 @@ jsPsych.data = (function() {
   module.getURLVariable = function(whichvar){
     return query_string[whichvar];
   }
-  // private function to save text file on local drive
 
+  // private function to save text file on local drive
   function saveTextToFile(textstr, filename) {
     var blobToSave = new Blob([textstr], {
       type: 'text/plain'
@@ -834,7 +834,6 @@ jsPsych.data = (function() {
 
   // this function is from StackOverflow:
   // http://stackoverflow.com/posts/3855394
-
   var query_string = (function(a) {
     if (a == "") return {};
     var b = {};
